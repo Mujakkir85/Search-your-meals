@@ -42,3 +42,19 @@ const displaySearchFood = (mealsData) => {
 }
 
 
+const getFoodItemDetails = (DetailsById) => {
+    //console.log(DetailsById);
+    const urlById = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${DetailsById}`
+    //console.log(urlById);
+
+    fetch(urlById)
+        .then(Response => Response.json())
+        .then(dataById => showFoodItemDetails(dataById.meals[0]))
+}
+
+
+const showFoodItemDetails = () => {
+
+    const singleDetails = document.getElementById('single-food-details');
+
+}
